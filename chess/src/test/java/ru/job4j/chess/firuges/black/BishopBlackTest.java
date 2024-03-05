@@ -23,7 +23,7 @@ class BishopBlackTest {
         assertThat(copy.position().equals(newCell)).isEqualTo(true);
     }
 
-/*    @Test
+    @Test
     public void testWay() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C8);
         Cell dest = Cell.F5;
@@ -33,5 +33,12 @@ class BishopBlackTest {
         for (int i = 0; i < expectedSteps.length; i++) {
             assertThat(expectedSteps[i]).isEqualTo(actualSteps[i]);
         }
-    }*/
+    }
+
+    @Test
+    public void testIsDiagonal() {
+        BishopBlack bishopBlack = new BishopBlack(Cell.C8);
+        Cell dest = Cell.F5;
+        assertThat(bishopBlack.isDiagonal(Cell.C8, dest)).isTrue();
+    }
 }
